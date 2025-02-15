@@ -23,11 +23,11 @@ print(punishmentNumber(1870)) # 18556601
 
 
 """
-Time Complexity: O(n * 2^n) 
+Time Complexity: O(n * 2^log(n))O(n * 2^7) #at max 7 digits in the number since n can be at max 1000 and 1000^2 = 1000000, so 7 digits in the number 
     where n is the input number, as we are checking all the possible combinations of numbers from 1 to n which is n complexity
     for each number we are checking all the possible combinations of the substrings of number which is 2^n complexity.
 
-Space Complexity: O(1)
+Space Complexity: O(log(n)) #recursive stack space(i.e. the depth of the recursion tree) where n is the input number
 """
 
 
