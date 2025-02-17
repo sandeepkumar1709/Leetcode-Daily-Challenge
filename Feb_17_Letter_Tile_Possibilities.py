@@ -36,4 +36,4 @@ def numTilePossibilities(tiles: str) -> int:
     
 
 if __name__ == "__main__":
-    numTilePossibilities("AAB") #8
+    print(numTilePossibilities("AAB")) #8
