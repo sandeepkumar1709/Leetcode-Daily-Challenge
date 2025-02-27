@@ -4,7 +4,7 @@ Approach:
     This will take O(n^2*Log(n)) time because the we kind of doubling the next element since it is fibonacci sequence.
 
     Now, let us take sequence of length 3, [1, 2, 3]. for pair (1,2), we can find 3, we get some answer. Now, pairing with 2 we get pair (2,3), 
-    which we would have already checked. So we can memorize that result, so we can use DP to solve it
+    which we would have already checked (it is like d[1][2] = 1+ dp[2][3]). So we can memorize that result, so we can use DP to solve it
 
 Time Complexity: O(n^2)
 
