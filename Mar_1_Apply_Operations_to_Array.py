@@ -1,3 +1,9 @@
+"""
+Approach:
+    Brute force approach works here. We can iterate through the array and check if the current element is same as next element, 
+    then we can double the current element and make next element as 0.
+"""
+
 def applyOperations(nums):
 
     n = len(nums)
