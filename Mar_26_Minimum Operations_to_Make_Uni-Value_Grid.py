@@ -47,4 +47,4 @@ def minOperations(grid, x):
 
 
 print(minOperations([[2,4],[6,8]], 2)) # Expected output: 4
-print(minOperations([[1,2,3],[4,5,6],[7,8,9]], 1)) # Expected output: 12
+print(minOperations([[1,2,3],[4,5,6],[7,8,9]], 1)) # Expected output: 20
