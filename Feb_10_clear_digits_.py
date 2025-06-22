@@ -1,18 +1,25 @@
+"""
+Approach:
+    We maintain a stack to keep track of the characters in the string.
+    We iterate through the string and if the character is a digit, we pop the last character from the stack.
+    If the character is a letter, we append it to the stack.
+    Finally, we join the characters in the stack to form the resulting string.
+Time complexity:
+    O(n) where n is the length of the string.
+
+Space complexity:
+    O(n) for the stack to store the characters.
+"""
+
+
 def clearDigits(s: str) -> str:
-    letter_index = []
-    i=0
-    while i < (len(s)):
-        if s[i] >= 'a' and s[i] <= 'z':
-            letter_index.append(i)
-            i+=1
+    stack = []
+    for i   in s:
+        if i >= 'a' and i <= 'z':
+            stack.append(i)
         else:
-            s = s[:i] + s[i+1:]
-            if len(letter_index) > 0:
-                latest_index = letter_index.pop()
-                s = s[:latest_index] + s[latest_index+1:]
-                i-=1
-        
-    return s
+            stack.pop()
+    return "".join(stack)
 
 
 
