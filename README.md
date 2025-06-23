@@ -1,12 +1,8 @@
 # 52-Day LeetCode Daily Challenge — Problem-Solving with Purpose
 
-![GitHub Repo stars](https://img.shields.io/github/stars/sandeepkumar1709/Leetcode-Daily-Challenge?style=social)
-![GitHub Forks](https://img.shields.io/github/forks/sandeepkumar1709/Leetcode-Daily-Challenge?style=social)
-![Last Commit](https://img.shields.io/github/last-commit/sandeepkumar1709/Leetcode-Daily-Challenge)
-
-> **Challenge:** Solve a LeetCode Daily Challenge every day  
->  **Goal:** Build consistency, deepen DSA mastery, and explain each solution  
-> **Completed:** 52 consecutive days of high-quality problem-solving
+**Challenge:** Solve a LeetCode Daily Challenge every day  
+**Goal:** Build consistency, deepen DSA mastery, and explain each solution  
+**Completed:** 52 consecutive days of high-quality problem-solving
 
 ---
 
@@ -26,11 +22,13 @@ As a software engineer, I'm passionate about writing code that not only works bu
 
 This repository is organized by date, matching the LeetCode Daily Challenge solved on that day.
 
+```
 📁 Leetcode-Daily-Challenge/
 ├── Feb_27_Maximum_Sum_With_Same_Digit_Sum.py
 ├── Feb_28_Some-Other-Problem.py
 ├── ...
 └── README.md
+```
 
 Each file follows this structure:
 
