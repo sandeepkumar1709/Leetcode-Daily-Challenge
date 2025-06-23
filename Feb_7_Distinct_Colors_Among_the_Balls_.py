@@ -1,41 +1,33 @@
+"""
+Approach:
+     We maintain 2 dictionaries:
+     1. slot: to keep track of the color of each ball at a given slot
+     2. color_counter: to count the occurrences of each color
+     Now if a ball is added to a slot, we check if the slot already has a color. If it does, we decrement the count of that color in color_counter. 
+     if the count becomes zero, we remove that color from color_counter. Then we update the slot with the new color and increment the count of that color in color_counter. 
+       Then the length of color_counter gives us the number of distinct colors at that point.
+
+Time Complexity: O(1) for each query, since insertion and deletion in dictionaries are average O(1) operations.
+Space Complexity: O(n) for storing the colors in the slot and their counts in color_counter
+
+"""
+
+from collections import defaultdict
+
+
+
+
 def queryResults(limit: int, queries):
-    ball_tracking, color_count = {},{}
-    return_ans, ans = [],  0
-    for ball, color in queries:
-        if ball not in ball_tracking:
-            ball_tracking[ball] = color
-            if color not in color_count or (color in color_count and color_count[color] == 0):
-                color_count[color] = 1
-                ans+=1
-                return_ans.append(ans)
-            else:
-                color_count[color] +=1
-                return_ans.append(ans)
-        else:
-            prev_color = ball_tracking[ball]
-            color_count[prev_color]-=1
-            if color_count[prev_color] == 0:
-                if color not in color_count or (color in color_count and color_count[color] == 0):
-                    color_count[color] = 1
-                    return_ans.append(ans)
-
-                else:
-                    color_count[color] += 1
-                    ans-=1
-                    return_ans.append(ans)
-            else:
-                if color not in color_count or (color in color_count and color_count[color] == 0):
-                    color_count[color] = 1
-                    ans+=1
-                    return_ans.append(ans)
-                else:
-                    color_count[color] +=1
-                    return_ans.append(ans)
-
-
-            ball_tracking[ball] = color
-
-    return return_ans
+        slot, color_counter,ans = {}, defaultdict(int),[]
+        for num, color in queries:
+            if num in slot:
+                color_counter[slot[num]]-=1
+                if color_counter[slot[num]] == 0:
+                    del color_counter[slot[num]]
+            slot[num] = color
+            color_counter[color] +=1
+            ans.append(len(color_counter))
+        return ans
 
 
 
